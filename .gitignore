@@ -31,3 +31,33 @@ build/
 
 ### VS Code ###
 .vscode/
+.env
+
+### Local env/secrets ###
+
+.envrc
+
+### macOS ###
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Spotlight, Trash, SMB
+.Spotlight-V100
+.Trashes
+.fseventsd
+.DS_Store?
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+
+### Logs ###
+*.log
+logs/
+
+### IntelliJ out ###
+out/
