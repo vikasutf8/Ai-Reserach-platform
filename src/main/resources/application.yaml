@@ -2,15 +2,15 @@ spring:
   application:
     name: Ai-Research-Agent
   config:
-#    import: optional:classpath:application-${spring.profiles.active}.yaml
+    #    import: optional:classpath:application-${spring.profiles.active}.yaml
     import: optional:file:.env[.properties]
 
 
-#  DB_USERNAME=
-#  DB_PASSWORD=
-#  DB_HOST=
-#  DB_PORT=
-#  DB_NAME=
+  #  DB_USERNAME=
+  #  DB_PASSWORD=
+  #  DB_HOST=
+  #  DB_PORT=
+  #  DB_NAME=
   datasource:
     url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:ai_research_agent}
     username: ${DB_USERNAME:}
@@ -18,9 +18,21 @@ spring:
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
-        ddl-auto: update
+      ddl-auto: update
     show-sql: true
     properties:
       hibernate:
         format_sql: true
         use_sql_comments: true
+# proxy info getting form proxySellers
+  proxy:
+    host: ${PROXY_HOST:}
+    port: ${PROXY_PORT:}
+    username: ${PROXY_USERNAME:}
+    password: ${PROXY_PASSWORD:}
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36";
+
+kind: Application
+
+# proxy configuration
+
