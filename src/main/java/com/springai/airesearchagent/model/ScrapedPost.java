@@ -67,7 +67,7 @@ public class ScrapedPost {
     private String subReddit;
 
     @Column(name = "proxy_ip_used", length = 50)
-    private String proxyIpUsed;
+    private String proxyIpUsed; // have to defined Ip to scraped it
 
     @Column(name = "posted_at")
     private Instant postedAt;
