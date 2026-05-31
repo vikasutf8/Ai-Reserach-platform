@@ -32,7 +32,37 @@ spring:
     password: ${PROXY_PASSWORD:}
     userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36";
 
+  scraping:
+    cron:
+      schedule: "0 0 */3 * * *"   # every 3 hours — override per env
+
+    reddit:
+#      client-id: ${REDDIT_CLIENT_ID}
+#      client-secret: ${REDDIT_CLIENT_SECRET}
+#      username: ${REDDIT_USERNAME}
+#      password: ${REDDIT_PASSWORD}
+      max-posts-per-subreddit: 100
+      request-delay-ms: 1000
+      subreddits:
+        - programming
+        - technology
+        - MachineLearning
+        - artificial
+        - startups
+        - SaaS
+
+    hacker-news:
+      top-stories-countL: 30
+      max-posts: 100
+      request-delay-ms: 500
+    producthunt:
+      posts-count: 100
+      max-posts: 100
+      request-delay-ms: 500
+
 kind: Application
 
 # proxy configuration
+
+#ScrapingConfig
 
